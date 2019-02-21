@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>콤보박스 만들기</title>
+</head>
+
+<body>
+  <h3>먹고 싶은 음식은?</h3>
+  <hr>
+  <form>
+    <select name="china">
+      <option value="1">짜장면</option>
+      <option value="2">짬뽕</option>
+      <option value="3">탕수육</option>
+      <option value="4">샥스핀</option>
+    </select>
+  </form>
+  <br>
+
+  <!-- multiple 사용 -->
+  <select name="china" multiple>
+    <option value="1">짜장면</option>
+    <option value="2">짬뽕</option>
+    <option value="3">탕수육</option>
+    <option value="4">샥스핀</option>
+  </select>
+  <br><br>
+
+  <!-- 데이터리스트 -->
+  <form>
+    나라 : <input type="text" list="countries"><br>
+    <datalist id="countries">
+      <option value="가나"></option>
+      <option value="스위스"></option>
+      <option value="브라질"></option>
+    </datalist>
+  </form>
+</body>
+
+</html>
