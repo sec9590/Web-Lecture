@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>셀렉터 활용</title>
+  <style>
+  .warning{ /*class select*/
+    color: red;
+  }
+  body.main{ /*class select*/
+    background: aliceblue;
+  }
+  h3, li { /*태그 이름 select*/
+    color: brown;
+  }
+  div>div>strong { /*자식 select*/
+    background: yellow;
+  }
+  ul strong { /*자손 select*/
+    color: dodgerblue;
+  }
+  #list { /*id select*/
+    background: mistyrose;
+  }
+  #list span{ /*id select*/
+    color : forestgreen;
+  }
+  h3:first-letter{ /* 가상 클래스 select*/
+    color: darkblue;
+  }
+  li:hover{ /* 가상 클래스 select*/
+    background: yellowgreen;
+  }
+  </style>
+</head>
+<body class="main">
+  <h3>Web Programming</h3>
+  <hr>
+  <div>
+    <div>2학기 <strong>학습 내용</strong></div>
+    <ul id="list">
+      <li>HTML5</li>
+      <li><strong>CSS</strong></li>
+      <li>JAVASCRIPT</li>
+    </ul>
+    <div class="warning">60점 이하는 F</div>
+  </div>
+</body>
+</html>

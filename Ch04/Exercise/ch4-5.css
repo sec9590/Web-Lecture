@@ -1,0 +1,23 @@
+body.main{
+  background: rgb(133, 212, 205);
+}
+h3{
+  color : green;
+}
+#center{
+  color: blue;
+  text-align: center;
+}
+div>strong{
+  background-color: yellow;
+}
+.indent{
+  text-indent: 3em;
+  text-align: justify;
+}
+div>p>em{
+  color: green;
+}
+p strong{
+  color: red;
+}
