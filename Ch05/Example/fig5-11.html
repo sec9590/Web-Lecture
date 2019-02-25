@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>리스트 꾸미기</title>
+  <style media="screen">
+    ul {
+      background : rgb(204, 228, 238);
+      padding : 10px 10px 10px 50px;
+      list-style-position : outside;
+      list-style-type : square;
+    }
+    ul li {
+      background : rgb(92, 183, 249);
+      margin-bottom : 5px;
+      text-indent : 1em;
+    }
+    .img {
+      list-style-image : url("media/marker.png")
+    }
+  </style>
+</head>
+<body>
+  <h3>커피 메뉴</h3>
+  <hr>
+  <ul>
+    <li>Espresso</li>
+    <li>Cappuccino</li>
+    <li>Cafe Latte</li>
+  </ul>
+
+  <ul class="img">
+    <li>Espresso</li>
+    <li>Cappuccino</li>
+    <li>Cafe Latte</li>
+  </ul>
+</body>
+</html>
