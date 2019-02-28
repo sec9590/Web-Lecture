@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>함수</title>
+  <script>
+    function adder(a, b) {
+      var sum;
+      sum = a + b;
+      return sum;
+    }
+
+    function sum(init, final, inc) {
+      var total = 0;
+      for (var i = init; i <= final; i += inc) {
+        total += i;
+      }
+      return total;
+    }
+  </script>
+
+</head>
+
+<body>
+  <h3>함수 adder()</h3>
+  <hr>
+
+  <script>
+    var n = adder(24567, 98374);
+    document.write("24567 + 98374 = " + n + "<br>");
+  </script>
+
+  <br><br><br>
+  
+  <h3>1~100까지 합, 짝수의 합, 홀수의 합</h3>
+  <hr>
+  <script>
+    var totalsum = sum(1, 100, 1);
+    var oddsum = sum(1, 100, 2);
+    var evensum = sum(2, 100, 2);
+
+    document.write("합 : " + totalsum + "<br>");
+    document.write("홀수 합 : " + oddsum + "<br>");
+    document.write("짝수 합 : " + evensum + "<br>");
+  </script>
+</body>
+
+</html>

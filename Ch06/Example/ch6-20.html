@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>break 문</title>
+</head>
+<body>
+  <h3>1에서 얼마까지 더해야 3000을 넘는가?</h3>
+  <hr>
+  <script>
+    var i = 0, sum = 0;
+
+    while(true){
+      sum += i;
+      if(sum > 3000)
+        break;
+      i++;
+    }
+
+    document.write(i + "까지 더하면 3000을 넘는다 : " + sum);
+  </script>
+
+  <br><br><br>
+
+  <h3>1에서 얼마까지 더해야 입력한 n을 넘는가?</h3>
+  <hr>
+  <script>
+
+    var i = 0, sum = 0;
+    var n = parseInt(prompt("n을 입력하세요.",""));
+
+    while(true){
+      sum += i;
+      if(sum > n)
+        break;
+      i++;
+    }
+
+    document.write(i + "까지 더하면 " + n + "을 넘는다 : " + sum);
+  </script>
+
+
+</body>
+</html>

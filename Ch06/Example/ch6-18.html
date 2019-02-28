@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>while 문</title>
+</head>
+
+<body>
+  <h3>while문으로 0에서 n까지 합</h3>
+  <hr>
+  <script>
+    var n = parseInt(prompt("0보다 큰 정수를 입력하세요.", 0));
+
+    var i = 0, sum = 0;
+
+    while (i <= n) {
+      sum += i;
+      i++;
+    }
+
+    document.write("0에서 " + n + "까지의 합 : " + sum);
+  </script>
+  <br><br><br>
+
+  <h3>for문으로 0에서 -n까지의 합</h3>
+  <hr>
+  <script>
+    var sum = 0;
+    var n = parseInt(prompt("0보다 작은 정수를 입력하세요.", 0));
+    
+    for (var i = 0; i >= n; i--) {
+      sum += i;
+    }
+
+    document.write("0에서 " + n + "까지의 합 : " + sum);
+  </script>
+</body>
+
+</html>
