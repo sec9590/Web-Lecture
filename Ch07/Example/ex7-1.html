@@ -5,39 +5,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>prompt()</title>
-  <script>
-    function printStar(n) {
-        var m = parseInt(n);
-        for (var i = 0; i < m; i++) {
-          for (var j = 1; j <= m-i; j++)
-            document.write("&nbsp");
-          for(var k=1; k<=i*2+1; k++)
-            document.write("*");
-          document.write("<br>");
-        }
-        for(var i=m-1; i>=1; i--){
-          for(var k=0; k<=m-i; k++)
-            document.write("&nbsp");
-          for(var j=1; j<=2*i-1; j++)
-            document.write("*");
-          document.write("<br>");
-        }
-
-
-      }
-
-
-
-  </script>
+  <title>객체 생성 및 활용</title>
 </head>
 
 <body>
-  <h3>별 문자 출력하기</h3>
+  <h3>객체 생성 및 활용</h3>
   <hr>
   <script>
-    var num = prompt("정수를 입력하세요.", "");
-    printStar(num);
+    var today = new Date(); //date 객체 생성
+    document.write("현재시간 : " + today.toLocaleString() + "<br>");
+    document.write("현재시간 : " + today.toGMTString() + "<br>");
+    document.write("현재시간 : " + today.toString() + "<br><br>");
+
+    var mystr = new String("자바스크립트 공부하기"); // string 객체 생성
+    document.write("mystr의 내용 : " + mystr + "<br>");
+    document.write("mystr의 길이 : " + mystr.length + "<br>");
   </script>
 </body>
 

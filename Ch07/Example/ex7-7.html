@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>String 객체의 메소드 활용</title>
+</head>
+<body>
+  <h3>String 객체의 메소드 활용</h3>
+  <hr>
+  <script>
+    //입력한 이름 오름차순으로 나열
+    var input = prompt("이름을 ,로 분리하여 입력하세요.");
+    document.write("<strong>사용자 입력 받기 : </strong>" + input + "<br>");
+    var sub = input.split(","); //입력한 문자를 ,로 분리
+    var array = new Array();
+    for(var i = 0; i<sub.length; i++)
+      array[i] = sub[i];
+    document.write("- 오름차순 나열 : " + array.sort() + "<br><hr>");
+
+    // string 메소드 활용
+    var a = new String("Boys and Girls");
+    var b = "!!";
+
+    document.write("a : " + a + "<br>");
+    document.write("b : " + b + "<br><hr>");
+
+    document.write(a.charAt(0) + "<br>");
+    document.write(a.concat(b, "입니다") + "<br>");
+    document.write(a.indexOf("s") + "<br>"); //s가 처음으로 나오는 인덱스 번호
+    document.write(a.indexOf("And") + "<br>");
+    document.write(a.slice(5, 8) + "<br>"); //5~8까지의 문자열
+    document.write(a.substr(5, 3) + "<br>"); //5에서 3글자 문자열
+    document.write(a.toUpperCase() + "<br>");
+    document.write(a.toLowerCase() + "<br>");
+    document.write(a.replace("and", "or") + "<br>");
+    document.write(" Hwang      kitae   ".trim() + "<br><hr>");
+
+    var sub = a.split(" ");
+    document.write("<strong>a를 빈칸으로 분리</strong><br>");
+    for(var i=0; i<sub.length; i++){
+      document.write("sub[" + i + "] = " + sub[i] + "<br>");
+    }
+
+    document.write("<hr><strong>String 메소드 실행 후 a와 b는 변함 없음</strong><br>");
+    document.write("a : " + a + "<br>");
+    document.write("b : " + b + "<br><hr>");
+
+    document.write("<strong>문자열 같은 가</strong> : ");
+    document.write(b == "!!");
+
+  </script>
+</body>
+</html>

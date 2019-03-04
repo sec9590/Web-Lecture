@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Math.random()으로 랜덤한 색 만들기</title>
+  <style media="screen">
+    div {
+      display: inline-block;
+      width: 150px;
+      padding: 10px;
+    }
+  </style>
+  <script type="text/javascript">
+    function random(){
+      var r = Math.floor(Math.random()*256);//0~255까지의 정수 생성
+      return r;
+    }
+  </script>
+</head>
+<body>
+  <h3>16개의 랜덤한 색 만들기</h3>
+  <hr>
+  <script>
+    var colorNames = new Array();
+    for (var i = 0; i < 16; i++){
+      colorNames[i] = "rgb("+ random() + "," + random() + "," + random()+")";
+      document.write("<div style='background:" + colorNames[i] + "';>" + colorNames[i] + "</div>");
+    }
+  </script>
+</body>
+</html>
