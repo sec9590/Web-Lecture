@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>z-index 스타일 프로퍼티</title>
+  <style>
+    div {
+      position : absolute;
+    }
+    img {
+      position : absolute;
+    }
+  </style>
+</head>
+<body>
+  <h3>z-index 스타일 프로퍼티</h3>
+  <hr>
+  <div>
+    <img src="media/spade-A.png" width="100" height="140" alt="스페이드A">
+    <img src="media/spade-2.png" width="100" height="140" alt="스페이드2">
+    <img src="media/spade-3.png" width="100" height="140" alt="스페이드3">
+    <img src="media/spade-7.png" width="100" height="140" alt="스페이드7">
+  </div>
+<script>
+var imgarray = document.getElementsByTagName("img");
+for(var i=0; i<imgarray.length; i++){
+  var img = imgarray[i];
+  img.style.zIndex = i;
+  img.style.left = "10px";
+  img.style.top = "20px";
+
+  img.onclick = imgclick;
+}
+function imgclick(){
+  for(var i=0; i<imgarray.length; i++){
+    var img = imgarray[i];
+    img.style.zIndex++;
+    if(img.style.zIndex>3)
+      img.style.zIndex = 0;
+  }
+}
+</script>
+</body>
+</html>

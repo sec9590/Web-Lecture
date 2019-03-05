@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>transform:rotate</title>
+  <script>
+    var n = 90;
+
+    function rotate_1(obj) {
+      obj.style.transform = "rotate(" + n + "deg)";
+    }
+
+    function rotate_2(obj) {
+      obj.style.transform = "rotate(" + n + "deg)";
+      n += 90;
+    }
+  </script>
+</head>
+
+<body>
+  <h3>7-1) 클릭하면 90도 회전합니다.</h3>
+  <hr>
+  <img src="media/spongebob.png" alt="" onclick="rotate_1(this)" width="200px" height="200px">
+
+  <br><br><br>
+
+  <h3>7-2) 클릭하면 90도 회전합니다.</h3>
+  <hr>
+  <img src="media/spongebob.png" alt="" onclick="rotate_2(this)" width="200px" height="200px">
+</body>
+
+</html>
