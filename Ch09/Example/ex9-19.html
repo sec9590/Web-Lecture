@@ -5,12 +5,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title></title>
+  <title>select 객체에서 선택한 과일 출력</title>
+  <script>
+    function drawImage(){
+      var sel = document.getElementById("fruit");
+      var img = document.getElementById("img");
+      img.src = sel.options[sel.selectedIndex].value;
+    }
+
+  </script>
 </head>
 
-<body>
-  <h3></h3>
+<body onload="drawImage()">
+  <h3>select 객체에서 선택한 과일 출력</h3>
   <hr>
+  과일을 선택하면 이미지가 출력됩니다.<p>
+  <form>
+    <select id="fruit" onchange="drawImage()" name="">
+      <option value="media/apple.png">사과</option>
+      <option value="media/strawberry.png">딸기</option>
+      <option value="media/banana.png">바나나</option>
+    </select>
+    <img src="media/banana.gif" id="img" alt="">
+  </form>
   <script>
     var
   </script>

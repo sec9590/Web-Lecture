@@ -4,16 +4,82 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title></title>
-</head>
-<body>
-  <h3></h3>
-  <hr>
+  <title>계산기 만들기</title>
+  <style media="screen">
+    td input{
+      width : 100px;
+    }
+    input {
+      width : 430px;
+    }
+  </style>
   <script>
-    var 
 
 
+    function input(add){
+      var text = document.getElementById("text");
+      if(text.value == 0)
+        text.value = add;
+      else {
+        text.value += add;
+      }
+    }
+    function calc(){
+      var text = document.getElementById("text");
+      text.value = eval(text.value);
+    }
+    function ce() {
+			var text = document.getElementById("text");
+			text.value = "0";
+		}
+    function back(){
+      var text = document.getElementById("text");
+      if(text.value == '0')
+        text.value = 0;
+      else
+        text.value = text.value.substr(0, text.value.length-1);
+    }
 
   </script>
+</head>
+<body>
+  <h3>계산기 만들기</h3>
+  <hr>
+  <form>
+    <input type="text" name="" value="0" id="text">
+  </form>
+  <table>
+    <tr>
+      <td><input type="button" value="BACK" onclick="back()"></td>
+      <td><input type="button" value="CE" onclick="ce()"></td>
+      <td><input type="button" value="C" onclick="ce()"></td>
+      <td><input type="button" value="=" onclick="calc()"></td>
+    </tr>
+    <tr>
+      <td><input type="button" value="7" onclick="input(value)"></td>
+      <td><input type="button" value="8" onclick="input(value)"></td>
+      <td><input type="button" value="9" onclick="input(value)"></td>
+      <td><input type="button" value="/" onclick="input(value)"></td>
+    </tr>
+    <tr>
+      <td><input type="button" value="4" onclick="input(value)"></td>
+      <td><input type="button" value="5" onclick="input(value)"></td>
+      <td><input type="button" value="6" onclick="input(value)"></td>
+      <td><input type="button" value="*" onclick="input(value)"></td>
+    </tr>
+    <tr>
+      <td><input type="button" value="1" onclick="input(value)"></td>
+      <td><input type="button" value="2" onclick="input(value)"></td>
+      <td><input type="button" value="3" onclick="input(value)"></td>
+      <td><input type="button" value="-" onclick="input(value)"></td>
+    </tr>
+    <tr>
+      <td><input type="button" value="0" onclick="input(value)"></td>
+      <td><input type="button" value="+" onclick="input(value)"></td>
+      <td><input type="button" value="NONE"></td>
+      <td><input type="button" value="NONE"></td>
+    </tr>
+  </table>
+
 </body>
 </html>

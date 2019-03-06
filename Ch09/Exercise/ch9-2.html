@@ -4,16 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title></title>
-</head>
-<body>
-  <h3></h3>
-  <hr>
+  <title>라디오 버튼과 이미지 출력</title>
   <script>
-    var 
 
+  function img_print(){
+    var fruit = document.getElementsByName('fruit');
+    var img = document.getElementById("img");
 
+    for(var i=0; i<fruit.length; i++){
+      if(fruit[i].checked == true)
+        img.src = fruit[i].value;
+    }
+  }
 
   </script>
+</head>
+<body>
+  <h3>라디오 버튼을 클릭하면 이미지를 출력합니다.</h3>
+  <hr>
+  <form>
+    <input type="radio" name="fruit" value="media/banana.png" onclick="img_print()"> 바나나
+    <input type="radio" name="fruit" value="media/mango.png"  onclick="img_print()"> 망고
+    <input type="radio" name="fruit" value="media/apple.png"  onclick="img_print()"> 사과
+    <br><br>
+    <img src=" " id="img" alt="">
+  </form>
 </body>
 </html>

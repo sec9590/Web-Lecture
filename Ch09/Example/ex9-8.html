@@ -5,14 +5,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title></title>
+  <title>이벤트 흐름</title>
 </head>
 
 <body>
-  <h3></h3>
+  <h3>이벤트 흐름</h3>
   <hr>
+  <p style="color:blue">이것은 <span style="color:red" id="span">문장입니다.</span></p>
+  <form>
+    <input type="text" name="s" value="">
+    <input type="button" name="" value="테스트" id="button">
+    <hr>
+  </form>
+  <div id="div" style="color:green"></div>
   <script>
-    var 
+    var div = document.getElementById("div");
+    var button = document.getElementById("button");
+
+    document.body.addEventListener('click', capture, true); //capture단계
+    button.addEventListener('click', bubble, false); // bubble단계
+    document.body.addEventListener("click", bubble, false);
+
+    function capture(e){
+      var obj = e.currentTarget;
+      var tagName = obj.tagName;
+      div.innerHTML += "<br>capture단계 : " + tagName + " 태그 " + e.type + "이벤트";
+    }
+
+    function bubble(e){
+      var obj = e.currentTarget;
+      var tagName = obj.tagName;
+      div.innerHTML += "<br>bubble단계 : " + tagName + " 태그 " + e.type + "이벤트";
+    }
   </script>
 </body>
 

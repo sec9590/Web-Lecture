@@ -1,19 +1,31 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title></title>
-</head>
-<body>
-  <h3></h3>
-  <hr>
+  <title>onmousemove</title>
+
   <script>
-    var 
-
-
-
+    function where() {
+      var div = document.getElementById("div");
+      document.onmousemove = function(e) {
+        div.style.left = event.clientX + "px"; //px꼭 붙여야함
+        div.style.top = event.clientY + "px";
+      }
+    }
   </script>
+</head>
+
+<body onload="where()">
+  <h3>이미지 커서 만들기</h3>
+  <hr>
+  <p>마우스를 움직이면 이미지로 만든 커서가 마우스를따라 다닙니다</p>
+  <div id="div" style="position:absolute;">
+    <img src="media/spongebob.png" width="30px" height="30px">
+  </div>
+
 </body>
+
 </html>

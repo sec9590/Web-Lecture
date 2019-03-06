@@ -33,12 +33,14 @@ for(var i=0; i<imgarray.length; i++){
 
   img.onclick = imgclick;
 }
+
 function imgclick(){
   for(var i=0; i<imgarray.length; i++){
     var img = imgarray[i];
     img.style.zIndex++;
     if(img.style.zIndex>3)
       img.style.zIndex = 0;
+
   }
 }
 </script>
