@@ -5,15 +5,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title></title>
+  <title>스크린 장치에 관한 정보 출력</title>
+  <script>
+    function printScreen() {
+      var text = "availHeight : " + screen.availHeight + "<br />";
+      text += "availWidth : " + screen.availWidth + "<br />";
+      text += "colorDepth : " + screen.colorDepth + "<br />";
+      text += "pixelDepth : " + screen.pixelDepth + "<br />";
+      text += "height : " + screen.height + "<br />";
+      text += "width : " + screen.width + "<br />";
+
+      document.getElementById("div").innerHTML = text;
+    }
+  </script>
 </head>
 
-<body>
-  <h3></h3>
+<body onload="printScreen()">
+  <h3>스크린 장치에 관한 정보</h3>
   <hr>
-  <script>
-    var
-  </script>
+  <div id="div"></div>
 </body>
 
 </html>

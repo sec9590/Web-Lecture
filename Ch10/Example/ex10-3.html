@@ -5,14 +5,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title></title>
+  <title>setTimeout()으로 웹 페이지 자동 연결</title>
 </head>
 
 <body>
-  <h3></h3>
+  <h3>이미지에 마우스를 올리고 5초간 그대로 있을 때 사이트로 이동합니다</h3>
   <hr>
+  <img src="media/naver.gif" onmouseover="startTimer(5000)" onmouseout="cancelTimer()" alt="" id="img">
   <script>
-    var
+    var timerID = NULL;
+    function startTimer(time) {
+      timerID = setTimeout("load('http://www.naver.com')", time);
+      document.getElementById("img").title = "타이머 작동 시작...";
+    }
+    function cancelTimer() {
+      if(timerID != null)
+        clearTimeout(timeID);
+    }
+    function load(url) {
+      window.location = url;
+    }
   </script>
 </body>
 

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>setTimeout()</title>
+  <style media="screen">
+    div{
+      border : 1px solid rgb(215, 215, 214);
+      background : rgb(196, 230, 242);
+      width : 150px;
+      text-align : center;
+    }
+  </style>
+  <script>
+    function startTimer(){
+      var now = new Date();
+      var div = document.getElementById("div");
+      div.innerHTML = now.toLocaleTimeString();
+      setTimeout(startTimer,1000);
+    }
+  </script>
+</head>
+
+<body onload="startTimer()">
+  <h3>div 태그에 시계 만들기</h3>
+  <hr>
+  <div id="div"></div>
+
+</body>
+
+</html>
